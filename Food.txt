@@ -1,0 +1,45 @@
+Beverage.Items.Add(new ComboBoxItem("1.95", "Soda"));
+            Beverage.Items.Add(new ComboBoxItem("1.50", "Tea"));
+            Beverage.Items.Add(new ComboBoxItem("1.25", "Coffee"));
+            Beverage.Items.Add(new ComboBoxItem("2.95", "Mineral Water"));
+            Beverage.Items.Add(new ComboBoxItem("2.50", "Juice"));
+            Beverage.Items.Add(new ComboBoxItem("1.50", "Milk"));
+
+ Beverage.Items.Add(new ComboBoxItem("5.95", "Buffalo Wings"));
+            Beverage.Items.Add(new ComboBoxItem("6.95", "Buffalo Fingers"));
+            Beverage.Items.Add(new ComboBoxItem("8.95", "Potato Skins"));
+            Beverage.Items.Add(new ComboBoxItem("8.95", "Nachos"));
+            Beverage.Items.Add(new ComboBoxItem("10.95", "Mushroom Caps"));
+            Beverage.Items.Add(new ComboBoxItem("12.95", "Shrimp Cocktail"));
+            Beverage.Items.Add(new ComboBoxItem("6.95", "Chips and Salsa"));
+
+Beverage.Items.Add(new ComboBoxItem("15.95", "Seafood Alfredo"));
+            Beverage.Items.Add(new ComboBoxItem("13.95", "Chicken Alfredo"));
+            Beverage.Items.Add(new ComboBoxItem("11.95", "Turkey Club"));
+            Beverage.Items.Add(new ComboBoxItem("19.95", "Lobster Pie"));
+            Beverage.Items.Add(new ComboBoxItem("20.95", "Prime Rib"));
+            Beverage.Items.Add(new ComboBoxItem("18.95", "Shrimp Scampi"));
+            Beverage.Items.Add(new ComboBoxItem("13.95", "Turkey Dinner"));
+            Beverage.Items.Add(new ComboBoxItem("14.95", "Stuffed Chicken"));
+
+Beverage.Items.Add(new ComboBoxItem("5.95", "Apple Pie"));
+            Beverage.Items.Add(new ComboBoxItem("3.95", "Sundae"));
+            Beverage.Items.Add(new ComboBoxItem("5.95", "Carrot Cake"));
+            Beverage.Items.Add(new ComboBoxItem("4.95", "Mud Pie"));
+            Beverage.Items.Add(new ComboBoxItem("5.95", "Apple Crisp"));
+
+
+            Main_Course.Items.Add(new ComboBoxItem(15.95, "Seafood Alfredo"));
+            Main_Course.Items.Add(new ComboBoxItem(13.95, "Chicken Alfredo"));
+            Main_Course.Items.Add(new ComboBoxItem(11.95, "Turkey Club"));
+            Main_Course.Items.Add(new ComboBoxItem(19.95, "Lobster Pie"));
+            Main_Course.Items.Add(new ComboBoxItem(20.95, "Prime Rib"));
+            Main_Course.Items.Add(new ComboBoxItem(18.95, "Shrimp Scampi"));
+            Main_Course.Items.Add(new ComboBoxItem(13.95, "Turkey Dinner"));
+            Main_Course.Items.Add(new ComboBoxItem(14.95, "Stuffed Chicken"));
+
+            Dessert.Items.Add(new ComboBoxItem(5.95, "Apple Pie"));
+            Dessert.Items.Add(new ComboBoxItem(3.95, "Sundae"));
+            Dessert.Items.Add(new ComboBoxItem(5.95, "Carrot Cake"));
+            Dessert.Items.Add(new ComboBoxItem(4.95, "Mud Pie"));
+            Dessert.Items.Add(new ComboBoxItem(5.95, "Apple Crisp"));
