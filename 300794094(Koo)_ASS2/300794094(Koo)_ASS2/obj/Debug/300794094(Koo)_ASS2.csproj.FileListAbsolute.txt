@@ -1,0 +1,15 @@
+C:\Users\300794094\Desktop\300794094(Koo)_ASS2\300794094(Koo)_ASS2\bin\Debug\300794094(Koo)_ASS2.exe.config
+C:\Users\300794094\Desktop\300794094(Koo)_ASS2\300794094(Koo)_ASS2\bin\Debug\300794094(Koo)_ASS2.exe
+C:\Users\300794094\Desktop\300794094(Koo)_ASS2\300794094(Koo)_ASS2\bin\Debug\300794094(Koo)_ASS2.pdb
+C:\Users\300794094\Desktop\300794094(Koo)_ASS2\300794094(Koo)_ASS2\obj\Debug\MainWindow.g.cs
+C:\Users\300794094\Desktop\300794094(Koo)_ASS2\300794094(Koo)_ASS2\obj\Debug\App.g.cs
+C:\Users\300794094\Desktop\300794094(Koo)_ASS2\300794094(Koo)_ASS2\obj\Debug\300794094(Koo)_ASS2_MarkupCompile.cache
+C:\Users\300794094\Desktop\300794094(Koo)_ASS2\300794094(Koo)_ASS2\obj\Debug\300794094(Koo)_ASS2_MarkupCompile.lref
+C:\Users\300794094\Desktop\300794094(Koo)_ASS2\300794094(Koo)_ASS2\obj\Debug\MainWindow.baml
+C:\Users\300794094\Desktop\300794094(Koo)_ASS2\300794094(Koo)_ASS2\obj\Debug\300794094(Koo)_ASS2.g.resources
+C:\Users\300794094\Desktop\300794094(Koo)_ASS2\300794094(Koo)_ASS2\obj\Debug\_300794094_Koo__ASS2.Properties.Resources.resources
+C:\Users\300794094\Desktop\300794094(Koo)_ASS2\300794094(Koo)_ASS2\obj\Debug\300794094(Koo)_ASS2.csproj.GenerateResource.Cache
+C:\Users\300794094\Desktop\300794094(Koo)_ASS2\300794094(Koo)_ASS2\obj\Debug\300794094(Koo)_ASS2.csproj.CoreCompileInputs.cache
+C:\Users\300794094\Desktop\300794094(Koo)_ASS2\300794094(Koo)_ASS2\obj\Debug\300794094(Koo)_ASS2.exe
+C:\Users\300794094\Desktop\300794094(Koo)_ASS2\300794094(Koo)_ASS2\obj\Debug\300794094(Koo)_ASS2.pdb
+C:\Users\300794094\Desktop\300794094(Koo)_ASS2\300794094(Koo)_ASS2\obj\Debug\300794094(Koo)_ASS2.csprojResolveAssemblyReference.cache
