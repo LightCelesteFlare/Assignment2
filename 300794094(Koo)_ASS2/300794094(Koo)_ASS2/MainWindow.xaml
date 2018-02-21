@@ -8,10 +8,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid Margin="0,0,0,0">
-        <ComboBox x:Name="Beverage" HorizontalAlignment="Left" Margin="5,100,0,0" VerticalAlignment="Top" Width="120" FontFamily="Segoe Print" Text="Beverage" AllowDrop="True" SelectionChanged="Beverage_SelectionChanged"/>
-        <ComboBox x:Name="Appetizer" HorizontalAlignment="Left" Margin="135,100,0,0" VerticalAlignment="Top" Width="120" FontFamily="Segoe Print" SelectionChanged="Appetizer_SelectionChanged" AllowDrop="True"/>
-        <ComboBox x:Name="Main_Course" HorizontalAlignment="Left" Margin="265,100,0,0" VerticalAlignment="Top" Width="120" FontFamily="Segoe Print" SelectionChanged="Main_Course_SelectionChanged" AllowDrop="True"/>
-        <ComboBox x:Name="Dessert" HorizontalAlignment="Left" Margin="395,100,0,0" VerticalAlignment="Top" Width="120" FontFamily="Segoe Print" AllowDrop="True" SelectionChanged="Dessert_SelectionChanged"/>
+        <ComboBox x:Name="Beverage" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="120" FontFamily="Segoe Print" Text="Beverage" AllowDrop="True" SelectionChanged="Beverage_SelectionChanged"/>
+        <ComboBox x:Name="Appetizer" HorizontalAlignment="Left" Margin="134,100,0,0" VerticalAlignment="Top" Width="120" FontFamily="Segoe Print" SelectionChanged="Appetizer_SelectionChanged" AllowDrop="True"/>
+        <ComboBox x:Name="Main_Course" HorizontalAlignment="Left" Margin="258,100,0,0" VerticalAlignment="Top" Width="120" FontFamily="Segoe Print" SelectionChanged="Main_Course_SelectionChanged" AllowDrop="True"/>
+        <ComboBox x:Name="Dessert" HorizontalAlignment="Left" Margin="382,100,0,0" VerticalAlignment="Top" Width="120" FontFamily="Segoe Print" AllowDrop="True" SelectionChanged="Dessert_SelectionChanged"/>
         <Button x:Name="Clear" Content="Clear" HorizontalAlignment="Left" Margin="28,274,0,0" VerticalAlignment="Top" Width="75" Click="Clear_Click"/>
         <TextBox x:Name="txtSubtotal" HorizontalAlignment="Left" Height="23" Margin="130,274,0,0" TextWrapping="Wrap" Text="$0.00" VerticalAlignment="Top" Width="100" IsHitTestVisible="False" IsReadOnly="True"/>
         <TextBox x:Name="txtTax" HorizontalAlignment="Left" Height="23" Margin="253,274,0,0" TextWrapping="Wrap" Text="$0.00" VerticalAlignment="Top" Width="100" IsReadOnly="True"/>
@@ -21,10 +21,19 @@
         <Label x:Name="Total" Content="Total" HorizontalAlignment="Left" Margin="379,243,0,0" VerticalAlignment="Top"/>
         <Label Content="Brandon Koo" HorizontalAlignment="Left" Margin="192,34,0,0" VerticalAlignment="Top"/>
         <Label Content="Beverage" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top"/>
-        <Label Content="Appetizer" HorizontalAlignment="Left" Margin="135,74,0,0" VerticalAlignment="Top"/>
-        <Label Content="Main Course" HorizontalAlignment="Left" Margin="265,74,0,0" VerticalAlignment="Top"/>
-        <Label Content="Dessert" HorizontalAlignment="Left" Margin="395,74,0,0" VerticalAlignment="Top"/>
-        <Image HorizontalAlignment="Left" Height="69" Margin="10,10,0,0" VerticalAlignment="Top" Width="186"/>
+        <Label Content="Appetizer" HorizontalAlignment="Left" Margin="134,74,0,0" VerticalAlignment="Top"/>
+        <Label Content="Main Course" HorizontalAlignment="Left" Margin="258,74,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dessert" HorizontalAlignment="Left" Margin="382,74,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-1.171"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Image HorizontalAlignment="Left" Height="69" Margin="10,10,0,0" VerticalAlignment="Top" Width="186" Source="Logo.png"/>
 
     </Grid>
 </Window>

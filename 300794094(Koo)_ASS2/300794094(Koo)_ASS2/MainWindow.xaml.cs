@@ -22,7 +22,7 @@ namespace _300794094_Koo__ASS2
     {
         public double subtotal = 0;
         public double tax = .15;
-        public double total;
+        public double total = 0;
 
         string a;
         string b;
@@ -35,121 +35,99 @@ namespace _300794094_Koo__ASS2
         public MainWindow()
         {
             InitializeComponent();
-            Beverage.Items.Add(new ComboBoxItem("Soda $1.95"));
-            Beverage.Items.Add(new ComboBoxItem("Tea $1.50"));
-            Beverage.Items.Add(new ComboBoxItem("Coffee $1.25"));
-            Beverage.Items.Add(new ComboBoxItem("Mineral Water $2.95"));
-            Beverage.Items.Add(new ComboBoxItem("Juice $2.50"));
-            Beverage.Items.Add(new ComboBoxItem("Milk $1.50"));
-
-            Appetizer.Items.Add(new ComboBoxItem("Buffalo Wings     $5.95"));
-            Appetizer.Items.Add(new ComboBoxItem("Buffalo Fingers   $6.95"));
-            Appetizer.Items.Add(new ComboBoxItem("Potato Skins      $8.95"));
-            Appetizer.Items.Add(new ComboBoxItem("Nachos            $8.95"));
-            Appetizer.Items.Add(new ComboBoxItem("Mushroom Caps     $10.95"));
-            Appetizer.Items.Add(new ComboBoxItem("Shrimp Cocktail   $12.95"));
-            Appetizer.Items.Add(new ComboBoxItem("Chips and Salsa   $6.95"));
-
-            Main_Course.Items.Add(new ComboBoxItem("Seafood Alfredo  $15.95"));
-            Main_Course.Items.Add(new ComboBoxItem("Chicken Alfredo  $13.95"));
-            Main_Course.Items.Add(new ComboBoxItem("Turkey Club      $11.95"));
-            Main_Course.Items.Add(new ComboBoxItem("Lobster Pie      $19.95"));
-            Main_Course.Items.Add(new ComboBoxItem("Prime Rib        $20.95"));
-            Main_Course.Items.Add(new ComboBoxItem("Shrimp Scampi    $18.95"));
-            Main_Course.Items.Add(new ComboBoxItem("Turkey Dinner    $13.95"));
-            Main_Course.Items.Add(new ComboBoxItem("Stuffed Chicken  $14.95"));
-
-            Dessert.Items.Add(new ComboBoxItem("Apple Pie       $5.95"));
-            Dessert.Items.Add(new ComboBoxItem("Sundae          $3.95"));
-            Dessert.Items.Add(new ComboBoxItem("Carrot Cake     $5.95"));
-            Dessert.Items.Add(new ComboBoxItem("Mud Pie         $4.95"));
-            Dessert.Items.Add(new ComboBoxItem("Apple Crisp     $5.95"));
-
-            //Beverage.Items.Add(new ComboBoxItem(0, "Soda"));
-            //Beverage.Items.Add(new ComboBoxItem(1, "Tea"));
-            //Beverage.Items.Add(new ComboBoxItem(2, "Coffee"));
-            //Beverage.Items.Add(new ComboBoxItem(3, "Mineral Water"));
-            //Beverage.Items.Add(new ComboBoxItem(4, "Juice"));
-            //Beverage.Items.Add(new ComboBoxItem(5, "Milk"));
-            //Appetizer.Items.Add(new ComboBoxItem(0, "Buffalo Wings"));
-            //Appetizer.Items.Add(new ComboBoxItem(1, "Buffalo Fingers"));
-            //Appetizer.Items.Add(new ComboBoxItem(2, "Potato Skins"));
-            //Appetizer.Items.Add(new ComboBoxItem(3, "Nachos"));
-            //Appetizer.Items.Add(new ComboBoxItem(4, "Mushroom Caps"));
-            //Appetizer.Items.Add(new ComboBoxItem(5, "Shrimp Cocktail"));
-            //Appetizer.Items.Add(new ComboBoxItem(6, "Chips and Salsa"));
-            //Main_Course.Items.Add(new ComboBoxItem("0", "Seafood Alfredo"));
-            //Main_Course.Items.Add(new ComboBoxItem("1", "Chicken Alfredo"));
-            //Main_Course.Items.Add(new ComboBoxItem("2", "Turkey Club"));
-            //Main_Course.Items.Add(new ComboBoxItem("3", "Lobster Pie"));
-            //Main_Course.Items.Add(new ComboBoxItem("4", "Prime Rib"));
-            //Main_Course.Items.Add(new ComboBoxItem("5", "Shrimp Scampi"));
-            //Main_Course.Items.Add(new ComboBoxItem("6", "Turkey Dinner"));
-            //Main_Course.Items.Add(new ComboBoxItem("7", "Stuffed Chicken"));
-            //Dessert.Items.Add(new ComboBoxItem("0", "Apple Pie"));
-            //Dessert.Items.Add(new ComboBoxItem("1", "Sundae"));
-            //Dessert.Items.Add(new ComboBoxItem("2", "Carrot Cake"));
-            //Dessert.Items.Add(new ComboBoxItem("3", "Mud Pie"));
-            //Dessert.Items.Add(new ComboBoxItem("4", "Apple Crisp"));
-
+            Menu();
         }
 
         private void Beverage_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            a = ((ComboBoxItem)Beverage.SelectedItem).ToString();
-            a1 = (Convert.ToDouble(a.Split('$')[1]));
-            subtotal = d1 + a1 + b1 + c1;
-            tax = subtotal * .15;
-            total = subtotal + tax;
-            txtSubtotal.Text = Convert.ToString(subtotal);
-            txtTax.Text = Convert.ToString(tax);
-            txtTotal.Text = Convert.ToString(Total);
+            try
+            {
+                a = ((ComboBoxItem)Beverage.SelectedItem).ToString();
+                a1 = Convert.ToDouble(a.Split('$')[1]);
+                subtotal = d1 + a1 + b1 + c1;
+                tax = Math.Round(subtotal * .15, 2);
+                total = Math.Round(subtotal + tax, 2);
+                txtSubtotal.Text = "$" + Convert.ToString(subtotal);
+                txtTax.Text = "$" + Convert.ToString(tax);
+                txtTotal.Text = "$" + Convert.ToString(total);
+            }
+            catch
+            {
+                a = "$0.00";
+                a1 = 0.00;
+            }
         }
 
         private void Appetizer_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            b = ((ComboBoxItem)Appetizer.SelectedItem).ToString();
-            b1 = (Convert.ToDouble(b));
-            subtotal = d1 + a1 + b1 + c1;
-            tax = subtotal * .15;
-            total = subtotal + tax;
-            txtSubtotal.Text = Convert.ToString(subtotal);
-            txtTax.Text = Convert.ToString(tax);
-            txtTotal.Text = Convert.ToString(Total);
+            try
+            { 
+                b = ((ComboBoxItem)Appetizer.SelectedItem).ToString();
+                b1 = Convert.ToDouble(b.Split('$')[1]); ;
+                subtotal = d1 + a1 + b1 + c1;
+                tax = Math.Round(subtotal * .15, 2);
+                total = Math.Round(subtotal + tax, 2);
+                txtSubtotal.Text = ("$" + Convert.ToString(subtotal));
+                txtTax.Text = ("$" + Convert.ToString(tax));
+                txtTotal.Text = "$" + Convert.ToString(total);
+            }
+            catch
+            {
+                b = "$0.00";
+                b1 = 0.00;
+            }
+    
         }
 
         private void Main_Course_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            c = ((ComboBoxItem)Main_Course.SelectedItem).ToString();
-            c1 = (Convert.ToDouble(c));
-            subtotal = d1 + a1 + b1 + c1;
-            tax = subtotal * .15;
-            total = subtotal + tax;
-            txtSubtotal.Text = Convert.ToString(subtotal);
-            txtTax.Text = Convert.ToString(tax);
-            txtTotal.Text = Convert.ToString(Total);
-
+            try
+            { 
+                c = ((ComboBoxItem)Main_Course.SelectedItem).ToString();
+                c1 = Convert.ToDouble(c.Split('$')[1]); ;
+                subtotal = d1 + a1 + b1 + c1;
+                tax = Math.Round(subtotal * .15, 2);
+                total = Math.Round(subtotal + tax, 2);
+                txtSubtotal.Text = "$" + Convert.ToString(subtotal);
+                txtTax.Text = "$" + Convert.ToString(tax);
+                txtTotal.Text = "$" + Convert.ToString(total);
+            }
+            catch
+            {
+                c = "$0.00";
+                c1 = 0.00;
+            }
         }
+    
 
         private void Dessert_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            d = ((ComboBoxItem)Dessert.SelectedItem).ToString();
-            d1 = (Convert.ToDouble(d));
-            subtotal = d1 + a1 + b1 + c1;
-            tax = subtotal * .15;
-            total = subtotal + tax;
-            txtSubtotal.Text = Convert.ToString(subtotal);
-            txtTax.Text = Convert.ToString(tax);
-            txtTotal.Text = Convert.ToString(Total);
+            try
+            {
+                d = ((ComboBoxItem)Dessert.SelectedItem).ToString();
+                d1 = Convert.ToDouble(d.Split('$')[1]); ;
+                subtotal = d1 + a1 + b1 + c1;
+                tax = Math.Round(subtotal * .15, 2);
+                total = Math.Round(subtotal + tax, 2);
+                txtSubtotal.Text = "$" + Convert.ToString(subtotal);
+                txtTax.Text = "$" + Convert.ToString(tax);
+                txtTotal.Text = "$" + Convert.ToString(total);
+            }
+            catch
+            {
+                d = "$0.00";
+                d1 = 0.00;
+            }
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
             Beverage.Items.Clear();
-            Main_Course.Items.Clear();
             Appetizer.Items.Clear();
+            Main_Course.Items.Clear();
             Dessert.Items.Clear();
-            
+            Menu();
+
             subtotal = 0;
             tax = 0;
             total = 0;
@@ -159,25 +137,53 @@ namespace _300794094_Koo__ASS2
             txtTotal.Text = "$0.00";
         }
 
+        public void Menu()
+        {
+            Beverage.Items.Add(new ComboBoxItem("Soda $1.95"));
+            Beverage.Items.Add(new ComboBoxItem("Tea $1.50"));
+            Beverage.Items.Add(new ComboBoxItem("Coffee $1.25"));
+            Beverage.Items.Add(new ComboBoxItem("Mineral Water $2.95"));
+            Beverage.Items.Add(new ComboBoxItem("Juice $2.50"));
+            Beverage.Items.Add(new ComboBoxItem("Milk $1.50"));
+
+            Appetizer.Items.Add(new ComboBoxItem("Buffalo Wings $5.95"));
+            Appetizer.Items.Add(new ComboBoxItem("Buffalo Fingers $6.95"));
+            Appetizer.Items.Add(new ComboBoxItem("Potato Skins $8.95"));
+            Appetizer.Items.Add(new ComboBoxItem("Nachos $8.95"));
+            Appetizer.Items.Add(new ComboBoxItem("Mushroom Caps $10.95"));
+            Appetizer.Items.Add(new ComboBoxItem("Shrimp Cocktail $12.95"));
+            Appetizer.Items.Add(new ComboBoxItem("Chips and Salsa $6.95"));
+
+            Main_Course.Items.Add(new ComboBoxItem("Seafood Alfredo $15.95"));
+            Main_Course.Items.Add(new ComboBoxItem("Chicken Alfredo $13.95"));
+            Main_Course.Items.Add(new ComboBoxItem("Turkey Club $11.95"));
+            Main_Course.Items.Add(new ComboBoxItem("Lobster Pie $19.95"));
+            Main_Course.Items.Add(new ComboBoxItem("Prime Rib $20.95"));
+            Main_Course.Items.Add(new ComboBoxItem("Shrimp Scampi $18.95"));
+            Main_Course.Items.Add(new ComboBoxItem("Turkey Dinner $13.95"));
+            Main_Course.Items.Add(new ComboBoxItem("Stuffed Chicken $14.95"));
+
+            Dessert.Items.Add(new ComboBoxItem("Apple Pie $5.95"));
+            Dessert.Items.Add(new ComboBoxItem("Sundae $3.95"));
+            Dessert.Items.Add(new ComboBoxItem("Carrot Cake $5.95"));
+            Dessert.Items.Add(new ComboBoxItem("Mud Pie $4.95"));
+            Dessert.Items.Add(new ComboBoxItem("Apple Crisp $5.95"));
+        }
+
     }
    
     public class ComboBoxItem
 
     {
-
-        public double Value;
-
         public string Text;
 
-        public ComboBoxItem(/*double val,*/ string text)
+        public ComboBoxItem(string text)
 
         {
-
-            //Value = val;
-
-            Text = text.Split('$')[0];
-            Value = Convert.ToDouble(text.Split('$')[1]);
-
+            if (text != null)
+            { 
+            Text = text;
+            }
         }
 
 
